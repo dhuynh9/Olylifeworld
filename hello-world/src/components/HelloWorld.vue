@@ -1,4 +1,10 @@
 <template>
+  <div class="construction-overlay">
+  <div class="construction-content">
+    <h1>🚧 We are under construction</h1>
+    <p>Please wait while we work on something amazing.</p>
+  </div>
+</div>
   <div>
     <!-- Navbar -->
     <nav :class="['navbar', { 'scrolled': isScrolled }]">
@@ -190,7 +196,35 @@ export default {
 .wellness-section { position:relative; width:100%; height:500px; background-image:url('@/assets/wellness.jpg'); background-size:cover; background-position:center; display:flex; justify-content:center; align-items:center; overflow:hidden; }
 .wellness-overlay { position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.35); display:flex; justify-content:center; align-items:center; }
 .wellness-title { font-family:'M PLUS Rounded 1c', sans-serif; font-size:3rem; color:#fff; text-align:center; text-shadow:2px 2px 12px rgba(0,0,0,0.6); padding:0 20px; }
+/* Under Construction Overlay */
+.construction-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(249, 249, 249, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
 
+.construction-content {
+  text-align: center;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.construction-content h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.construction-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
 /* Responsive */
 @media (max-width:900px) { 
   .content-container { flex-direction: column; }
